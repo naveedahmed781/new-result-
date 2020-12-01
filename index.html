@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="#" onsubmit="check()">
+        <input type="number" id="temp">
+        <button>Show Result</button>
+    </form>
+
+    <h1 id="result"></h1>
+
+
+
+    <script>
+
+        function check() {
+            let temp = document.getElementById("temp").value;
+            temp = parseFloat(temp);
+
+            if(temp < -25 )  {
+                document.getElementById("result").innerHTML = "<h1> You Don't Wanted To Got There </h1>"
+            }
+
+            else if (temp < -10) {
+                document.getElementById("result").innerHTML = "<h1> Carry Heater </h1>"
+            }
+            
+            else if (temp < 20) {
+
+                document.getElementById("result").innerHTML = "<h1> Carry Jacket </h1>"
+            }
+            
+            else if(temp <= 35) {
+                document.getElementById("result").innerHTML = "<h1> No Need </h1>"
+            }
+            
+            else{
+                document.getElementById("result").innerHTML = "<h1> Carry Fridge </h1>"
+            }
+        }
+        
+    </script>
+    
+</body>
+</html>
